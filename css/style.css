@@ -312,7 +312,7 @@ template {
   font-display: wrap; }
 
 @font-face {
-  font-family: 'Futura Book';
+  font-family: 'Futura Demi';
   src: url("../fonts/Futura/FuturaDemiC.woff") format("woff"), url("../fonts/Futura/FuturaDemiC.woff2") format("woff");
   font-weight: normal;
   font-style: normal;
