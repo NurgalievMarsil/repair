@@ -1,28 +1,29 @@
 .hero 
-  position: relative
-  display: flex
-  flex-direction: column
-  justify-content: center
-  background: $dark url('../img/image 4.3.jpg')
-  background-repeat: no-repeat
-  background-size: cover
-  height: 100vh
-  color: $light
-  padding-top: 100px
+  &
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    background: $dark url('../img/image 4.3.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+    height: 100vh
+    color: $light
+    padding-top: 100px
   &::before
     content: ''
     position: absolute
     top: 0
     left: 0
-
     width: 100%
     height: 100%
     background-color: rgba($dark, 0.7)
   &__content 
-    max-width: 670px
+    max-width: 47.85rem
     position: relative
+    margin-left: 4.28rem
   &__text
-    font-size: 22px
+    font-size: 1.57rem
     max-width: 510px
   &__button 
     margin-right: 20px
@@ -39,8 +40,8 @@
     align-items: center
     left: 0
     bottom: 0
-    min-width: 247px
-    min-height: 97px
+    min-width: 17.6rem
+    min-height: 6.92rem
     background-color: $dark
     text-transform: uppercase
     color: $light
@@ -78,6 +79,6 @@
   margin: 0
   font-family: 'Yeseva One', cursive
   text-transform: uppercase
-  font-size: 40px
+  font-size: 2.857rem
   &--primary 
     color: $primary
