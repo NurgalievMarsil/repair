@@ -620,7 +620,8 @@ img {
   .types-design {
     background-color: #131313; }
     .types-design__heading {
-      color: #fff; }
+      color: #fff;
+      padding-top: 2rem; }
   .types__card {
     margin-bottom: 5rem; }
   .card__text {
