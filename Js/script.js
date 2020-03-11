@@ -12,8 +12,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       }
   });
 
-  document.addEventListener('keydown', function (e) {
-      if (e.keyCode === 27 && modal.classList.contains('modal--visible')) switchModal();
-  });
-
+  document.addEventListener('keydown', e => {
+    e.keyCode === 27 && modal.classList.contains('modal--visible') ? switchModal() : false;
+});
 });
