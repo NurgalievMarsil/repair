@@ -12,14 +12,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
   dark.addEventListener('click', switchModal);
   closeBtn.addEventListener('click', switchModal);
-  // document.addEventListener('keypress', switchModal);
-  // document.addEventListener('keypress', function (e) {
-  //   if(e.keyCode === 27) document.getElementsById('modal').hidden= 1;
-  // });
-  document.addEventListener('keypress', function(e) {
-    switch(e.keyCode) {
-      case 27:
+  document.addEventListener('keydown', function (e) {
+    if (e.keyCode === 27 && modal.classList.contains('modal--visible')) {
         switchModal();
     }
-  }) 
+  });
 });

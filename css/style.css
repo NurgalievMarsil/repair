@@ -664,8 +664,8 @@ img {
   visibility: hidden;
   position: fixed;
   z-index: 1999;
-  left: 50%;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   max-width: 506px;
   max-height: 509px;
