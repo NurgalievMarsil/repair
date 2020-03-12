@@ -1,7 +1,7 @@
-const {src, dest, watch} = require('gulp');
-const browserSync = require('browser-sync').create();
-const sass= require('gulp-sass');
-const autoprefixer = require('gulp-autoprefixer');
+const {src, dest, watch}          = require('gulp'),
+      browserSync                 = require('browser-sync').create(),
+      sass                        = require('gulp-sass'),
+      autoprefixer                = require('gulp-autoprefixer');
 
 // Static server
 function bs() {
@@ -14,8 +14,8 @@ function bs() {
   watch("./*.html").on('change', browserSync.reload);
   watch("./sass/**/*.sass", serveSass);
   watch("./sass/**/*.scss", serveSass);
-  watch("./Js/*.js").on('change', browserSync.reload);
-};
+  watch("./js/*.js").on('change', browserSync.reload);
+}
 
 function serveSass() {
   return src("./sass/**/*.sass", "./sass/**/*.scss")
@@ -25,6 +25,6 @@ function serveSass() {
       }))
       .pipe(dest("./css"))
       .pipe(browserSync.stream());
-};
+}
 
 exports.serve = bs;
