@@ -588,7 +588,7 @@ img {
     text-transform: uppercase;
     color: #E3B873;
     text-decoration: none;
-    transform: rotate(270deg);
+    transform: rotate(90deg);
     line-height: 0.8;
     font-size: 1.1rem; }
     .instagram__link::after {
@@ -772,6 +772,9 @@ img {
 .swiper-slide {
   display: flex;
   flex-wrap: wrap; }
+  .swiper-slide__image {
+    max-width: 680px;
+    max-height: 482px; }
   .swiper-slide__value {
     font-size: 1.08rem;
     font-weight: normal;
@@ -842,6 +845,18 @@ img {
     margin-left: 0; } }
 
 @media screen and (max-width: 920px) {
+  .swiper__mobile {
+    width: 100%; }
+    .swiper__mobile__image {
+      margin-top: 2.85rem; }
+  .swiper-slide__heading {
+    font-size: 1rem; }
+  .section-title__text {
+    font-size: 1rem;
+    line-height: 158.48%;
+    max-width: 305px; }
+  .section-title__word::after {
+    display: none; }
   .row {
     flex-direction: column;
     align-items: center; }
