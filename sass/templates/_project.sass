@@ -1,3 +1,32 @@
+.slide 
+  &-name 
+    display: inline-block
+    width: 30%
+    margin-bottom: 35px
+    text-align: left
+    &__description 
+      font-size: 1.07rem
+      line-height: 1.28rem
+      font-weight: normal
+    &__number 
+      position: relative
+      font-size: 1.07rem
+      line-height: 1.5rem
+      font-weight: normal
+      text-transform: uppercase
+      &::after 
+        content: ''
+        position: absolute
+        width: 1.429rem
+        height: 1px
+        background-color: #E3B873
+        bottom: -0.357rem
+        left: 0
+.slider
+  &-titles
+    margin-top: 71px
+    display: flex
+    flex-wrap: wrap
 .swiper
   &__number
     font-size: 1.28rem

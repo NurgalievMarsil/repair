@@ -787,6 +787,35 @@ img {
     font-family: 'Futura DemiC', sans-serif;
     font-weight: 600; }
 
+.slide-name {
+  display: inline-block;
+  width: 30%;
+  margin-bottom: 35px;
+  text-align: left; }
+  .slide-name__description {
+    font-size: 1.07rem;
+    line-height: 1.28rem;
+    font-weight: normal; }
+  .slide-name__number {
+    position: relative;
+    font-size: 1.07rem;
+    line-height: 1.5rem;
+    font-weight: normal;
+    text-transform: uppercase; }
+    .slide-name__number::after {
+      content: '';
+      position: absolute;
+      width: 1.429rem;
+      height: 1px;
+      background-color: #E3B873;
+      bottom: -0.357rem;
+      left: 0; }
+
+.slider-titles {
+  margin-top: 71px;
+  display: flex;
+  flex-wrap: wrap; }
+
 .swiper__number {
   font-size: 1.28rem;
   line-height: 1.78rem; }
@@ -893,12 +922,21 @@ img {
     margin-left: 0; } }
 
 @media screen and (max-width: 920px) {
+  .swiper-pagination {
+    margin-left: 30px;
+    margin-bottom: 2px; }
+  .swiper-button-prev {
+    margin-left: 30px; }
+  .swiper-button-next {
+    margin-left: 30px; }
   .swiper__mobile {
     width: 100%; }
     .swiper__mobile__image {
       margin-top: 2.85rem; }
   .swiper-slide__heading {
     font-size: 1rem; }
+  .section__none {
+    display: none; }
   .section-title__text {
     font-size: 1rem;
     line-height: 158.48%;
