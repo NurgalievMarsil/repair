@@ -480,6 +480,9 @@ img {
   align-items: center;
   justify-content: center; }
 
+.col-25 {
+  flex-basis: 25%; }
+
 .col-30 {
   flex-basis: 30%; }
 
@@ -1047,53 +1050,82 @@ img {
     background-color: #131313;
     padding: 4.285rem 0; }
 
-.people__image {
-  position: relative;
-  max-width: 272px;
-  white-space: 100%;
-  max-height: 357px;
-  height: 100%; }
-  .people__image__icon {
-    padding: 13px;
-    background-color: #E3B873;
-    box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5); }
+.team__section-text {
+  max-width: 32rem;
+  margin: auto;
+  margin-bottom: 5rem; }
 
-.people__text {
-  margin-top: -9rem;
-  padding: 21px;
-  margin: 0 auto;
-  box-shadow: 0px 10px 15px #131313 0, 0, 0, 0.05;
-  z-index: 2;
-  background-color: #fff;
+.team__row {
+  margin-bottom: 7.5rem; }
+
+.team__card {
   position: relative; }
-  .people__text__description {
-    text-align: center; }
-  .people__text__name {
-    font-family: 'Yeseva One', sans-serif;
+
+.team__icon {
+  position: absolute;
+  top: -50px;
+  left: -55px; }
+
+.team__box {
+  position: absolute;
+  bottom: -58px;
+  left: 20px;
+  width: 100%;
+  max-width: 16.642rem;
+  background-color: #fff; }
+  .team__box-inner {
+    padding: 1.571rem 1.9rem 0 1.9rem; }
+  .team__box-title {
+    display: block;
+    color: #181818;
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
     font-size: 1.285rem;
     line-height: 1.785rem;
-    font-weight: normal; }
-
-.people-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.people-title {
-  max-width: 32rem; }
-  .people-title__heading {
-    font-family: 'Yeseva One', cursive;
-    font-size: 1.428rem;
-    line-height: 2rem;
+    text-align: center; }
+    .team__box-title--bottom {
+      margin-bottom: 0.4rem; }
+  .team__box-text {
+    display: block;
+    color: #959595;
+    font-style: normal;
     font-weight: normal;
-    text-transform: uppercase; }
-  .people-title__text {
-    font-family: 'Futura Book', sans-serif;
-    font-size: 1.428rem;
-    line-height: 1.928rem;
+    font-size: 1.285rem;
+    line-height: 1.857rem;
+    text-align: center; }
+    .team__box-text--bottom {
+      margin-bottom: 1.414rem; }
+  .team__box-info {
+    display: block;
+    background-color: #E3B873;
+    padding: 1.1rem 1.642rem;
+    font-family: Yeseva One;
+    font-style: normal;
     font-weight: normal;
-    text-transform: none;
-    margin: auto; }
+    font-size: 0.928rem;
+    line-height: 1.428rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff; }
+
+.team-text {
+  max-width: 45.57rem;
+  margin: auto;
+  font-style: norma;
+  font-weight: normal;
+  font-size: 1.428rem;
+  line-height: 2.428rem;
+  text-align: center; }
+  .team-text::before {
+    content: '';
+    display: block;
+    margin: auto;
+    margin-bottom: 2.2rem;
+    width: 55px;
+    height: 2px;
+    background-color: #E3B873;
+    border-radius: 30%; }
 
 @media screen and (max-width: 1240px) {
   .nav__item {
