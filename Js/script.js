@@ -16,6 +16,7 @@
 //     e.keyCode === 27 && modal.classList.contains('modal--visible') ? switchModal() : false;
 // });
 // });
+new WOW().init()
 
 $(document).ready(function () {
     var modal = $('.modal'),
