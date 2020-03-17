@@ -9,6 +9,11 @@
   html 
     font-size: 12px
 @media screen and ( max-width: 992px  )
+  .footer 
+    &-wrap
+      margin: auto
+    &__menu
+      display: none
   .nav 
     display: none
   .hero 
@@ -88,6 +93,17 @@
         &-name
           margin-bottom: 4.5rem
 @media screen and ( max-width: 570px )
+  .footer
+    background: $black
+    &__form
+      width: 100%
+      display: block
+    &-wrap
+      margin: auto
+    &__policy 
+      margin-bottom: 4.78rem
+    &__button
+      width: 100%
   .control
     &__video
       max-width: 400px
@@ -149,7 +165,6 @@
         color: $light
   .modal 
     width: 90%
-  &__button
 @media screen and ( max-width: 390px )
   .control
     &__video

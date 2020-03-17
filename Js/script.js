@@ -47,6 +47,40 @@ $(document).ready(function () {
 
     next.css('left', prev.width() + 10 + bullets.width() + 10) 
     bullets.css('left', prev.width() + 10)
+
+    
+  // валидация
+  $('.modal__form').validate({
+    errorElement: "div",
+    errorClass: "invalid",
+    rules: {
+      // simple rule, converted to {required:true}
+      userName: {
+        required: true,
+        minlength: 2
+      },
+      userPhone: "required",
+      // compound rule
+      userEmail: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче 2 букв"
+      }, 
+      userPhone: "Телефон обязателен",
+      userEmail: {
+        required: "Обизательно укажите email",
+        email: "Введите в формате name@domain.com"
+      }
+    }
+  });
+
+
+  $('[type=tel]').mask('+7(000) 00-00-000', {placeholder: "+7 (___) __-__-___"});
 });
 
 var btn = $('#button');
@@ -63,4 +97,3 @@ btn.on('click', function(e) {
   e.preventDefault();
   $('html, body').animate({scrollTop:0}, '300');
 });
-
