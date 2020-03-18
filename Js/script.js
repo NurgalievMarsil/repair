@@ -89,7 +89,7 @@ $(document).ready(function () {
 
 
   $('.control__form').validate({
-    errorElement: "label",
+    errorElement: "div",
     errorClass: "invalid",
     rules: {
       // simple rule, converted to {required:true}
@@ -102,13 +102,9 @@ $(document).ready(function () {
       userEmail: {
         required: true,
         email: true
-      },
-      userCheckbox: "required"
+      }
     },
     messages: {
-      userCheckbox: {
-        required: "Обязательно",
-      },
       userName: {
         required: "Имя обязательно",
         minlength: "Имя не короче 2 букв"

@@ -496,7 +496,8 @@ img {
   width: 60%; }
 
 .control__button {
-  padding: 1.2857rem 4.785rem; }
+  padding: 1.2857rem 4.785rem;
+  align-self: flex-start; }
 
 .control__label {
   margin-bottom: 7px; }
@@ -908,14 +909,7 @@ img {
   margin-top: 71px;
   display: flex;
   flex-wrap: wrap; }
-  .slider-titles__block {
-    color: grey;
-  }
-  .slider-titles__block.active {
-    color: #fff;
-   }
 
-    
 .swiper__number {
   font-size: 1.28rem;
   line-height: 1.78rem; }
@@ -1060,7 +1054,27 @@ img {
     min-height: 465px;
     max-width: 925px;
     margin: auto;
-    margin-bottom: 2rem; }
+    margin-bottom: 66px; }
+  .footer__info__image {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .footer__info__image__message {
+      margin-right: 1.07rem;
+      margin-bottom: 3.09rem; }
+    .footer__info__image__instagram {
+      margin-bottom: 3.09rem; }
+  .footer__info__info {
+    text-align: center;
+    font-family: 'Yeseva One', sans-serif;
+    color: #E3B873; }
+    .footer__info__info__description {
+      margin-bottom: 1.857rem;
+      font-size: 1.428rem;
+      line-height: 2rem;
+      text-transform: uppercase; }
+      .footer__info__info__description__word {
+        display: block; }
 
 .team__section-text {
   max-width: 32rem;
