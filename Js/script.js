@@ -41,6 +41,13 @@ $(document).ready(function () {
         prevEl: '.swiper-button-prev',
       },
     })
+
+    mySwiper[2].on('slideChange', function () {
+      document.querySelectorAll(`.slider-titles__block`).forEach(block => block.classList.remove('active'));
+      document.querySelector(`.number0${this.realIndex+1}`).classList.add('active');
+    });
+
+    
     var next = $('.swiper-button-next');
     var prev = $('.swiper-button-prev');
     var bullets = $('.swiper-pagination');
@@ -48,6 +55,7 @@ $(document).ready(function () {
     next.css('left', prev.width() + 10 + bullets.width() + 10) 
     bullets.css('left', prev.width() + 10)
 
+    
     
   // валидация
   $('.modal__form').validate({
@@ -73,14 +81,116 @@ $(document).ready(function () {
       }, 
       userPhone: "Телефон обязателен",
       userEmail: {
-        required: "Обизательно укажите email",
+        required: "Обязательно укажите email",
         email: "Введите в формате name@domain.com"
       }
     }
   });
 
 
+  $('.control__form').validate({
+    errorElement: "label",
+    errorClass: "invalid",
+    rules: {
+      // simple rule, converted to {required:true}
+      userName: {
+        required: true,
+        minlength: 2
+      },
+      userPhone: "required",
+      // compound rule
+      userEmail: {
+        required: true,
+        email: true
+      },
+      userCheckbox: "required"
+    },
+    messages: {
+      userCheckbox: {
+        required: "Обязательно",
+      },
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче 2 букв"
+      }, 
+      userPhone: "Телефон обязателен",
+      userEmail: {
+        required: "Обязательно укажите email",
+        email: "Введите в формате name@domain.com"
+      }
+    }
+  });
+
+  $('.footer__form').validate({
+    errorElement: "div",
+    errorClass: "invalid",
+    rules: {
+      // simple rule, converted to {required:true}
+      userName: {
+        required: true,
+        minlength: 2
+      },
+      userQuestion: {
+        required: true,
+        minlength: 10
+      },
+      userPhone: "required",
+      // compound rule
+    },
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче 2 букв"
+      }, 
+      userPhone: "Телефон обязателен",
+      userEmail: {
+        required: "Обязательно укажите email",
+        email: "Введите в формате name@domain.com"
+      },
+      userQuestion: {
+        required: "Обязательно укажите вопрос",
+        minlength: "Вопрос не меньше 10 букв"
+      }
+    }
+  });
+  
+
+  // Функция ymaps.ready() будет вызвана, когда
+  ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+            center: [54.713681, 55.993384],
+            zoom: 9
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+
+        // Создаём макет содержимого.
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        ),
+
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: 'Наш офис',
+            balloonContent: 'Вход со двора'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: 'img/location.png',
+            // Размеры метки.
+            iconImageSize: [32, 32],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-5, -38]
+        });
+
+    myMap.geoObjects
+        .add(myPlacemark)
+});
+
   $('[type=tel]').mask('+7(000) 00-00-000', {placeholder: "+7 (___) __-__-___"});
+
 });
 
 var btn = $('#button');

@@ -908,6 +908,12 @@ img {
   margin-top: 71px;
   display: flex;
   flex-wrap: wrap; }
+  .slider-titles__block {
+    color: grey;
+  }
+  .slider-titles__block.active {
+    color: #fff;
+   }
 
 .swiper__number {
   font-size: 1.28rem;
@@ -1049,6 +1055,11 @@ img {
   .footer__menu {
     background-color: #131313;
     padding: 4.285rem 0; }
+  .footer__map {
+    min-height: 465px;
+    max-width: 925px;
+    margin: auto;
+    margin-bottom: 2rem; }
 
 .team__section-text {
   max-width: 32rem;
