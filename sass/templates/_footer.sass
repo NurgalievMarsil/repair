@@ -10,6 +10,7 @@
     margin: auto
     margin-bottom: 3.714rem
     padding: 2.5rem
+    margin-top: -20rem
   &__title
     font-family: 'Yeseva One', cursive
     text-transform: uppercase
@@ -52,11 +53,13 @@
     background-color: $dark
     padding: 4.285rem 0
   &__map
-    min-height: 465px
+    height: 33.214rem
     max-width: 925px
     margin: auto
     margin-bottom: 66px
   &__info
+    display: flex
+    flex-direction: column
     &__image
       display: flex
       justify-content: center
@@ -71,9 +74,11 @@
       font-family: 'Yeseva One', sans-serif
       color: $primary
       &__description  
-        margin-bottom: 1.857rem
         font-size: 1.428rem
         line-height: 2rem
         text-transform: uppercase
+        max-width: 35rem
+        margin: auto
+        margin-bottom: 1.857rem
         &__word
           display: block
