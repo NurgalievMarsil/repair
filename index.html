@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic-ext" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="swiper/swiper.min.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://api-maps.yandex.ru/2.1/?apikey=4efaa63f-f26b-40b0-8700-b80bd88919e6&lang=ru_RU" type="text/javascript"></script>
 </head>
@@ -180,19 +181,19 @@
       </div>
       <p class="control__text">На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.</p>
 
-      <form action="" class="form control__form">
+      <form action="send.php" method="POST" class="form control__form">
         <div class="control__input-group control__input-group-name">
-          <label for="user-name" class="label form__label control__label">Имя</label>
-          <input type="text" autocomplete="off" name="userName" class="input form__input control__input" id="user-name" placeholder="Как вас зовут:">
+          <label for="control-user-name" class="label form__label control__label">Имя</label>
+          <input type="text" autocomplete="off" name="userName" class="input form__input control__input" id="control-user-name" placeholder="Как вас зовут:">
         </div>
         <div class="control__input-group">
-          <label for="user-phone" class="label form__label label__phone control__label">Телефон</label>
-          <input type="tel" autocomplete="off" name="userPhone" class="input form__input control__input" id="user-phone" placeholder="Ваш номер телефона:">
+          <label for="control-user-phone" class="label form__label label__phone control__label">Телефон</label>
+          <input type="tel" autocomplete="off" name="userPhone" class="input form__input control__input" id="control-user-phone" placeholder="Ваш номер телефона:">
         </div>
         <button class="button button--primary control__button">Отправить</button>
         <div class="policy control__policy">
-          <input type="checkbox" name="userCheckbox" id="policy-checkbox" class="policy__checkbox" checked>
-          <label for="policy-checkbox" class="policy__label control__policy-label">Я соглашаюсь с обработкой данных</label>
+          <input type="checkbox" name="userCheckbox" id="control-policy-checkbox" class="control__policy__checkbox" checked>
+          <label for="control-policy-checkbox" class="policy__label control__policy-label">Я соглашаюсь с обработкой данных</label>
         </div>
         <!-- /.policy -->
       </form>
@@ -711,25 +712,25 @@
       <div class="footer-wrap">
         <h3 class="footer__title">Остались вопросы?</h3>
         <!-- /.footer__title -->
-        <form action="#" class="form footer__form">
+        <form action="send.php" method="POST" class="form footer__form">
           <div class="input-group footer__input-group">
-            <label for="user-name" class="label form__label label--light footer__form__label">Имя</label>
-            <input type="text" autocomplete="off" name="userName" class="input form__input footer__input input--light" id="user-name" placeholder="Как вас зовут:">
+            <label for="footer-user-name" class="label form__label label--light footer__form__label">Имя</label>
+            <input type="text" autocomplete="off" name="userName" class="input form__input footer__input input--light" id="foooter-user-name" placeholder="Как вас зовут:">
           </div>
           <!-- /.input-group footer__input-group -->
           <div class="input-group footer__input-group">
-            <label for="user-phone" class="label form__label label--light label__phone footer__form__label">Телефон</label>
-            <input type="tel" autocomplete="off" name="userPhone" class="input form__input footer__input input--light" id="user-phone" placeholder="Ваш номер телефона:">
+            <label for="footer-user-phone" class="label form__label label--light label__phone footer__form__label">Телефон</label>
+            <input type="tel" autocomplete="off" name="userPhone" class="input form__input footer__input input--light" id="footer-user-phone" placeholder="Ваш номер телефона:">
           </div>
           <!-- /.input-group footer__input-group -->
           <div class="input-group footer__input-group footer__input-group--full--width">
-            <label for="user-question" class="label form__label label--light footer__form__label">Вопрос</label>
-            <input type="text" autocomplete="off" name="userQuestion" class="input form__input footer__input input--light" id="user-question" placeholder="Я хочу спросить:">
+            <label for="footer-user-question" class="label form__label label--light footer__form__label">Вопрос</label>
+            <input type="text" autocomplete="off" name="userQuestion" class="input form__input footer__input input--light" id="footer-user-question" placeholder="Я хочу спросить:">
           </div>
           <!-- /.input-group footer__input-group -->
           <div class="policy footer__policy">
-            <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__checkbox" checked>
-            <label for="policy-checkbox" class="policy__label policy__label--center">Я соглашаюсь с обработкой данных</label>
+            <input type="checkbox" name="footerCheckbox" id="footer-policy-checkbox" class="policy__checkbox" checked>
+            <label for="footer-policy-checkbox" class="policy__label policy__label--center">Я соглашаюсь с обработкой данных</label>
           </div>
           <!-- /.policy -->
           <button class="button button--primary footer__button">Отправить</button>
@@ -779,20 +780,20 @@
         <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами </h3>
         <form action="send.php" method="POST" class="form modal__form">
           <div class="input-group modal__input-group">
-            <label for="user-name" class="label form__label label--light">Имя</label>
-            <input type="text" autocomplete="off" name="userName" class="input form__input modal__input input--light" id="user-name" placeholder="Как вас зовут:">
+            <label for="modal-user-name" class="label form__label label--light">Имя</label>
+            <input type="text" autocomplete="off" name="userName" class="input form__input modal__input input--light" id="modal-user-name" placeholder="Как вас зовут:">
           </div>
           <div class="input-group modal__input-group">
-            <label for="user-phone" class="label form__label label--light label__phone">Телефон</label>
-            <input type="tel" autocomplete="off" name="userPhone" class="input form__input modal__input input--light" id="user-phone" placeholder="Ваш номер телефона:">
+            <label for="modal-user-phone" class="label form__label label--light label__phone">Телефон</label>
+            <input type="tel" autocomplete="off" name="userPhone" class="input form__input modal__input input--light" id="modal-user-phone" placeholder="Ваш номер телефона:">
           </div>
           <div class="input-group modal__input-group">
-            <label for="user-email" class="label form__label label--light">Email</label>
-            <input type="email" autocomplete="off" name="userEmail" class="input form__input modal__input modal__input__email input--light" id="user-email" placeholder="Ваш email:">
+            <label for="modal-user-email" class="label form__label label--light">Email</label>
+            <input type="email" autocomplete="off" name="userEmail" class="input form__input modal__input modal__input__email input--light" id="modal-user-email" placeholder="Ваш email:">
           </div>
           <div class="policy modal__policy">
-            <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__checkbox" checked>
-            <label for="policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
+            <input type="checkbox" name="modalCheckbox" id="modal-policy-checkbox" class="policy__checkbox" checked>
+            <label for="modal-policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
           </div>
           <!-- /.policy -->
           <button class="button button--primary modal__button">Отправить заявку</button>
@@ -810,6 +811,7 @@
   <script src="Js/wow.min.js"></script>
   <script src="Js/jquery.validate.min.js"></script>
   <script src="Js/jquery.mask.min.js"></script>
+  <script src="swiper/swiper.min.js"></script>
   <script src="Js/script.js"></script>
 </body>
 </html>

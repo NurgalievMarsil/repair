@@ -59,7 +59,7 @@ $(document).ready(function () {
     
   // валидация
   $('.modal__form').validate({
-    errorElement: "div",
+    errorElement: "em",
     errorClass: "invalid",
     rules: {
       // simple rule, converted to {required:true}
@@ -72,7 +72,8 @@ $(document).ready(function () {
       userEmail: {
         required: true,
         email: true
-      }
+      },
+      modalCheckbox: "required",
     },
     messages: {
       userName: {
@@ -80,16 +81,32 @@ $(document).ready(function () {
         minlength: "Имя не короче 2 букв"
       }, 
       userPhone: "Телефон обязателен",
+      modalCheckbox: "Обработка данных обязательна",
       userEmail: {
         required: "Обязательно укажите email",
         email: "Введите в формате name@domain.com"
       }
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          alert('Предлагаю вам подписаться на группу вконтакте: https://vk.com/glo_academy');
+          $(form)[0].reset();
+          modal.removeClass('modal--visible');
+        },
+        error: function (response) {
+          console.error('Ошибка запроса ' + response);
+        }
+      });
     }
   });
 
 
   $('.control__form').validate({
-    errorElement: "div",
+    errorElement: "em",
     errorClass: "invalid",
     rules: {
       // simple rule, converted to {required:true}
@@ -102,7 +119,8 @@ $(document).ready(function () {
       userEmail: {
         required: true,
         email: true
-      }
+      },
+      userCheckbox: "required"
     },
     messages: {
       userName: {
@@ -113,7 +131,23 @@ $(document).ready(function () {
       userEmail: {
         required: "Обязательно укажите email",
         email: "Введите в формате name@domain.com"
-      }
+      },
+      userCheckbox: "Обработка обязательна"
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          alert('Предлагаю вам подписаться на группу вконтакте: https://vk.com/glo_academy');
+          $(form)[0].reset();
+          modal.removeClass('modal--visible');
+        },
+        error: function (response) {
+          console.error('Ошибка запроса ' + response);
+        }
+      });
     }
   });
 
@@ -132,6 +166,7 @@ $(document).ready(function () {
       },
       userPhone: "required",
       // compound rule
+      footerCheckbox: "required"
     },
     messages: {
       userName: {
@@ -146,7 +181,23 @@ $(document).ready(function () {
       userQuestion: {
         required: "Обязательно укажите вопрос",
         minlength: "Вопрос не меньше 10 букв"
-      }
+      },
+      footerCheckbox: "Обработка обязательна"
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          alert('Предлагаю вам подписаться на группу вконтакте: https://vk.com/glo_academy');
+          $(form)[0].reset();
+          modal.removeClass('modal--visible');
+        },
+        error: function (response) {
+          console.error('Ошибка запроса ' + response);
+        }
+      });
     }
   });
   
