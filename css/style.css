@@ -366,7 +366,7 @@ template {
 .policy__checkbox {
   opacity: 0;
   visibility: hidden; }
-  .policy__checkbox:checked + .policy__label::before {
+  .policy__checkbox:checked ~ .policy__label::before {
     background: #E3B873 url("../img/gal.svg");
     background-position: center;
     background-repeat: no-repeat;
@@ -1080,7 +1080,9 @@ label.invalid {
     padding: 4.285rem 0; }
   .footer__map {
     height: 33.214rem;
+    min-height: 33.214rem;
     max-width: 925px;
+    width: 100%;
     margin: auto;
     margin-bottom: 66px; }
   .footer__info {
